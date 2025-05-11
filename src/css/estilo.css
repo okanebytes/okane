@@ -98,7 +98,7 @@ video{
 }
 #mvvContainer p{
     text-align: left;
-    font-size: clamp(2rem, 2vw, 2rem);
+    font-size: clamp(1.5rem, 2vw, 2rem);
     padding: 5%;
 }
 .txtTop{
@@ -130,7 +130,11 @@ footer{
     #logo img{
         width: 400px;
     }
-    #mvvContainer{
+    /* #mvvContainer{
+    } */
+    .mvvItens{
+        width: 320px;
         align-items: center;
+
     }
 }
