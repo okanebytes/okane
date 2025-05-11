@@ -130,6 +130,6 @@ footer{
         width: 400px;
     }
     #mvvContainer{
-        padding-left: 0%;
+        padding-left: 0 auto;
     }
 }
