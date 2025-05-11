@@ -46,7 +46,7 @@ video{
 #quemSomos{
     margin: 0 auto;
     padding: 5%;
-    font-size: 2.3vh;
+    font-size: clamp(1rem, 2vw, 2rem);
     max-width: 1200px;
     display: flex;
     flex-direction: row;
@@ -71,14 +71,15 @@ video{
 }
 #mvvContainer h2{
     text-align: left;
-    font-size: 4vh;
+    font-size: clamp(1rem, 2vw, 2rem);
 }
 #mvvContainer p{
     text-align: left;
-    font-size: clamp(1rem, 2vw, 2rem);;
+    font-size: clamp(1rem, 2vw, 2rem);
     padding: 5%;
 }
 .mvvItens{
+    border-radius: 10px;
     margin-top: 20px;
     background:var(--bgColor2);
     display: flex;
