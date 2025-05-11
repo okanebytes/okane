@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root{
     --bgColor1:#000;
     --bgColor2:#241E58;
+    --bgColor3:#fff;
     --fontColor1:#000;
     --fontColor2:#fff;
     --fontColor3:#241E58;
@@ -9,6 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
 }
 
 body{
@@ -21,6 +25,9 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+.logo img{
+    width:7%;
 }
 ul{
     display: flex;
@@ -50,7 +57,7 @@ video{
     max-width: 1200px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
     color: var(--fontColor2);
     gap: 5%;
@@ -61,6 +68,7 @@ video{
 }
 .quemSomosItem h3{
     font-weight: lighter;
+    font-size: clamp(1.5rem, 2vw, 2rem);
 }
 #mvvContainer{
     display: grid;
@@ -68,15 +76,6 @@ video{
     color: var(--fontColor2);
     padding-left: 13%;
     padding-top: 5%;
-}
-#mvvContainer h2{
-    text-align: left;
-    font-size: clamp(1rem, 2vw, 2rem);
-}
-#mvvContainer p{
-    text-align: left;
-    font-size: clamp(1rem, 2vw, 2rem);
-    padding: 5%;
 }
 .mvvItens{
     border-radius: 10px;
@@ -86,9 +85,20 @@ video{
     flex-direction: column;
     align-items: center;
     width: 347.67px;
-    height: 318px;
+    height: 358px;
     align-items: center;
     text-align: center;
+    font-weight: 100;
+}
+#mvvContainer h2{
+    padding-top: 2%;
+    text-align: left;
+    font-size: clamp(2rem, 2vw, 2rem);
+}
+#mvvContainer p{
+    text-align: left;
+    font-size: clamp(2rem, 2vw, 2rem);
+    padding: 5%;
 }
 .txtTop{
     display: flex;
@@ -97,4 +107,23 @@ video{
     margin: 0 auto;
     display: block;
     color: white;
+}
+footer{
+    display: flex;
+    align-items: center;
+    background: var(--bgColor2);
+    color: var(--bgColor3);
+    margin-top: 5%;
+    height: 200px;
+}
+/* RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS */
+
+@media (max-width:768px){
+    #quemSomos{
+        display: flex;
+        flex-direction: column;
+    }
+    .logo img{
+        width:40%;
+    }
 }
