@@ -1,0 +1,99 @@
+:root{
+    --bgColor1:#000;
+    --bgColor2:#241E58;
+    --fontColor1:#000;
+    --fontColor2:#fff;
+    --fontColor3:#241E58;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--bgColor1);
+}
+header{
+    padding: 13px;
+    background: var(--bgColor2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    text-align: center;
+    list-style: none;
+}
+li{
+    display: flex;
+    flex-direction: row;
+}
+a{
+    color: var(--fontColor2);
+    text-decoration: none;
+}
+video{
+    width: 100%;
+    height: 65vh; /* ou o tamanho que desejar */
+    object-fit: cover;
+    object-position: center;
+}
+#quemSomos{
+    margin: 0 auto;
+    padding: 5%;
+    font-size: 2.3vh;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--fontColor2);
+    gap: 5%;
+}
+.quemSomosItem h2{
+    color: var(--fontColor3);
+    font-weight: 600;
+}
+.quemSomosItem h3{
+    font-weight: lighter;
+}
+#mvvContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    color: var(--fontColor2);
+    padding-left: 13%;
+    padding-top: 5%;
+}
+#mvvContainer h2{
+    text-align: left;
+    font-size: 4vh;
+}
+#mvvContainer p{
+    text-align: left;
+    font-size: clamp(1rem, 2vw, 2rem);;
+    padding: 5%;
+}
+.mvvItens{
+    margin-top: 20px;
+    background:var(--bgColor2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 347.67px;
+    height: 318px;
+    align-items: center;
+    text-align: center;
+}
+.txtTop{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    color: white;
+}
