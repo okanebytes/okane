@@ -129,4 +129,7 @@ footer{
     #logo img{
         width: 400px;
     }
+    #mvvContainer{
+        padding-left: 9%;
+    }
 }
