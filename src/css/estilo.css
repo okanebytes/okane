@@ -126,4 +126,7 @@ footer{
     .logo img{
         width:40%;
     }
+    #logo img{
+        width: 400px;
+    }
 }
