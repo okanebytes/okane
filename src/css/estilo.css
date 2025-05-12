@@ -6,7 +6,7 @@
     --bgColor3:#fff;
     --fontColor1:#000;
     --fontColor2:#fff;
-    --fontColor3:#241E58;
+    --fontColor3:#6050f0;
 }
 *{
     margin: 0;
@@ -68,7 +68,7 @@ video{
 }
 .quemSomosItem h3{
     font-weight: lighter;
-    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-size: clamp(1rem, 2vw, 2rem);
 }
 #mvvContainer{
     display: grid;
@@ -124,6 +124,12 @@ footer{
         display: flex;
         flex-direction: column;
     }
+    .quemSomosItem{
+        margin-bottom: 20px;
+    }
+    #videoContainer{
+        display: none;
+    }
     .logo img{
         width:40%;
     }
@@ -132,8 +138,12 @@ footer{
     }
     /* #mvvContainer{
     } */
+     #logo img{
+        border-radius: 20px;
+     }
     .mvvItens{
         width: 320px;
+        height: 250px;
         align-items: center;
 
     }
