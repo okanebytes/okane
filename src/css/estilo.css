@@ -29,6 +29,10 @@ header{
 .logo img{
     width:7%;
 }
+#logo img{
+    border-radius: 16px;
+
+}
 ul{
     display: flex;
     flex-direction: row;
