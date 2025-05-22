@@ -28,7 +28,4 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
         });
-
-        document.addEventListener('DOMContentLoaded', function() {
-    const video = document.querySelector('video');
     
