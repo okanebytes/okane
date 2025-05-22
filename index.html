@@ -11,7 +11,9 @@
 
 <body>
     <header>
-        <div class="logo"><img src="./src/assets/logoCorrida.PNG" alt="logoCorrida" ></div>
+        <div class="logo"><img src="./src/assets/logoCorrida.PNG" alt="logoCorrida"></div>
+        
+        <!-- Menu para desktop -->
         <div class="listHead">
             <nav>
                 <ul>
@@ -20,11 +22,32 @@
                 </ul>
             </nav>
         </div>
+        
+        <!-- Menu toggle para mobile -->
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <!-- Menu mobile -->
+        <div class="mobile-menu">
+            <nav>
+                <ul>
+                    <li><a href="#quemSomos" class="mobile-link">SOBRE</a></li>
+                    <li><a href="#footerContainer" class="mobile-link">CONTATOS</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div id="videoContainer">
-        <video src="./src/assets/video_code.mp4" autoplay muted loop></video>
-    </div>
+<!-- <div id="videoContainer">
+    <video autoplay muted loop playsinline poster="./src/assets/video-poster.jpg">
+        <source src="./src/assets/video_code.mp4" type="video/mp4">
+        Fallback para imagem 
+        <img src="./src/assets/video-poster.jpg" alt="Vídeo não disponível">
+    </video>
+</div> -->
 
     <main id="quemSomos">
             <div class="quemSomosItem">
@@ -72,6 +95,10 @@
             <a href="https://www.instagram.com/okanebytes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="./src/assets/instagram.png" alt="instagram"></a></img>
         </footer>
     </div>
+
+    <script src="./src/js/script.js">
+  
+    </script>
 </body>
 
 </html>
