@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --bgColor1:#000;
-    --bgColor2:#241E58;
-    --bgColor3:#fff;
-    --fontColor1:#000;
-    --fontColor2:#fff;
-    --fontColor3:#6050f0;
+    --bgColor1: #000014;   /* Fundo quase preto com leve roxo, elegante */
+    --bgColor2:#1d153a;   /* Roxo imperial profundo, sofisticado */
+    --bgColor3:#FDFDFE;   /* Branco quase puro, pra contraste limpo */
+
+    --fontColor1:#1A1528; /* Roxo bem escuro para textos em fundos claros */
+    --fontColor2:#EDE9F9; /* Cinza claro arroxeado para texto em fundos escuros */
+    --fontColor3:#7345d6; /* Roxo vibrante, passa tecnologia e inovação */
 }
+
+
 *{
     margin: 0;
     padding: 0;
@@ -30,8 +33,9 @@ header{
     width:7%;
 }
 #logo img{
+    margin-left: 15%;
+    max-width: 80%;
     border-radius: 16px;
-
 }
 ul{
     display: flex;
@@ -48,27 +52,11 @@ a{
     color: var(--fontColor2);
     text-decoration: none;
 }
-#videoContainer {
-    width: 100%;
-    height: 65vh;
-    overflow: hidden;
-    position: relative;
-}
-
-#videoContainer video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 #quemSomos{
     margin: 0 auto;
-    padding: 5%;
+    padding: 3% 15%;
     font-size: clamp(1rem, 2vw, 2rem);
-    max-width: 1200px;
+    max-width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between; 
@@ -77,51 +65,69 @@ a{
     gap: 5%;
 }
 .quemSomosItem h2{
-    color: var(--fontColor3);
+    color: var(--bgColor3);
     font-weight: 600;
 }
 .quemSomosItem h3{
+    max-width: 550px;
+    margin: 20px 0;
     font-weight: lighter;
-    font-size: clamp(1rem, 2vw, 2rem);
+    font-size: clamp(0.6rem, 2vw, 2rem);
 }
-#mvvContainer{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    align-items: center;
-    color: var(--fontColor2);
-    padding-left: 11%;
-    padding-top: 5%;
+
+/* ========== Acordeão ========== */
+.accordion {
+  max-width: 900px;
+  margin: 1rem auto 2rem;
+  display: grid;
+  gap: 0.75rem;
 }
-.mvvItens{
-    border-radius: 10px;
-    margin-top: 20px;
-    background:var(--bgColor2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 347.67px;
-    height: 358px;
-    align-items: center;
-    text-align: center;
-    font-weight: 100;
+.accordion-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bgColor2);
+  color: var(--fontColor2);
 }
-#mvvContainer h2{
-    padding-top: 2%;
-    text-align: left;
-    font-size: clamp(2rem, 2vw, 2rem);
+.accordion-trigger {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-#mvvContainer p{
-    text-align: left;
-    font-size: clamp(1.5rem, 2vw, 2rem);
-    padding: 5%;
+.accordion-icon {
+  transition: transform 0.2s ease;
 }
+.accordion-trigger.active .accordion-icon {
+  transform: rotate(45deg);
+}
+.accordion-panel {
+  display: none;
+  padding: 0 1.25rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.accordion-panel.open {
+  display: block;
+}
+
+/* Texto invisível até abrir */
+.accordion-panel p {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.accordion-panel.open p {
+  opacity: 1;
+}
+
 .txtTop{
-    display: flex;
-    align-items: center;
     text-align: center;
     margin: 0 auto;
-    display: block;
-    color: white;
+    color: var(--bgColor3);
+    margin-top: 40px;
 }
 footer{
     display: flex;
@@ -130,9 +136,11 @@ footer{
     color: var(--bgColor3);
     margin-top: 5%;
     height: 200px;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* Estilos para o menu toggle */
+/* ========== MENU RESPONSIVO ========== */
 .menu-toggle {
     display: none;
     background: none;
@@ -141,7 +149,6 @@ footer{
     padding: 10px;
     z-index: 1000;
 }
-
 .menu-toggle span {
     display: block;
     width: 25px;
@@ -150,7 +157,6 @@ footer{
     margin: 5px 0;
     transition: all 0.3s ease;
 }
-
 .mobile-menu {
     display: none;
     position: fixed;
@@ -166,80 +172,48 @@ footer{
     transform: translateY(-100%);
     transition: transform 0.3s ease;
 }
-
 .mobile-menu.active {
     transform: translateY(0);
 }
-
 .mobile-menu nav ul {
     flex-direction: column;
     gap: 30px;
 }
-
 .mobile-menu nav ul li a {
     font-size: 1.5rem;
 }
-
-/* Estilo quando o menu está ativo */
 .menu-toggle.active span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
-
 .menu-toggle.active span:nth-child(2) {
     opacity: 0;
 }
-
 .menu-toggle.active span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Esconde o menu desktop e mostra o toggle em telas pequenas */
+/* RESPONSIVO */
 @media (max-width: 768px) {
     .listHead {
         display: none;
     }
-    
     .menu-toggle {
         display: block;
     }
-    
     .mobile-menu {
         display: flex;
     }
-    
-    /* Ajuste para o logo no header em mobile */
     .logo img {
         width: 40%;
     }
-}
-/* RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS */
-
-@media (max-width:768px){
-    #quemSomos{
-        display: flex;
+    #quemSomos {
         flex-direction: column;
     }
-    .quemSomosItem{
-        margin-bottom: 20px;
-    }
-    #videoContainer{
-        display: none;
-    }
-    .logo img{
-        width:40%;
-    }
-    #logo img{
-        width: 400px;
-    }
-    /* #mvvContainer{
-    } */
-     #logo img{
+    #logo img {
+        width: 300px;
         border-radius: 20px;
-     }
-    .mvvItens{
-        width: 320px;
-        height: 250px;
-        align-items: center;
-
     }
+    /* #quemSomosItem{
+        font-size: 0;
+    } */
 }
