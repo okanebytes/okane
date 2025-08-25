@@ -16,6 +16,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Raleway", sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -105,14 +106,21 @@ a{
   transform: rotate(45deg);
 }
 .accordion-panel {
-  display: none;
-  padding: 0 1.25rem 1rem;
+  max-height: 0; /* altura inicial */
+  overflow: hidden;
+  padding: 0 1.25rem;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
   font-size: 0.9rem;
   line-height: 1.5;
 }
+
 .accordion-panel.open {
-  display: block;
+  max-height: 500px; /* ajusta conforme seu conteúdo */
+  opacity: 1;
+  padding: 1rem 1.25rem;
 }
+
 
 /* Texto invisível até abrir */
 .accordion-panel p {
