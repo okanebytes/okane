@@ -71,7 +71,7 @@ a{
 .quemSomosItem h3{
     max-width: 550px;
     margin: 20px 0;
-    font-weight: lighter;
+    font-weight: normal;
     font-size: clamp(0.6rem, 4.8vw, 2rem);
 }
 
